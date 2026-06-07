@@ -248,6 +248,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ currentPage, onNavigate }) =
                       src={post.image} 
                       alt={post.title} 
                       referrerPolicy="no-referrer"
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <span className="absolute bottom-3 left-3 bg-slate-900/90 border border-slate-700/60 text-white text-[9px] font-bold uppercase tracking-wider py-1 px-2.5 rounded">

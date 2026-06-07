@@ -114,6 +114,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800" 
               alt="Professional local workshop preparing garage technical gears" 
               referrerPolicy="no-referrer"
+              loading="lazy"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 bg-slate-950/80 p-6 text-white border-t border-white/10 flex justify-between items-center">

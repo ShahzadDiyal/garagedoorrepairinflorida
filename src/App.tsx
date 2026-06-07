@@ -54,6 +54,8 @@ import { ServicesPage } from './components/ServicesPage';
 import { AreasPage } from './components/AreasPage';
 import { BlogPage } from './components/BlogPage';
 import { ContactPage } from './components/ContactPage';
+import { SEOManager } from './components/SEOManager';
+import { MobileStickyCTA } from './components/MobileStickyCTA';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
@@ -114,9 +116,10 @@ export default function App() {
       {/* Global layout elements on ALL pages */}
       <AnnouncementBar />
       <Header currentPage={currentPage} onNavigate={handleNavigate} />
+      <SEOManager currentPage={currentPage} />
 
       {/* Main page view renderer */}
-      <main className="flex-grow">
+      <main className="flex-grow pb-16 sm:pb-0">
         
         {/* ========================================================= */}
         {/* VIEW: HOME PAGE */}
@@ -331,6 +334,9 @@ export default function App() {
       
       {/* Draggable Call widget on ALL views */}
       <FloatingCallButton />
+      
+      {/* Mobile Sticky docked bottom bar */}
+      <MobileStickyCTA onNavigate={handleNavigate} />
     </div>
   );
 }
