@@ -3,32 +3,32 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
-import { 
-  Sparkles, 
-  Clock, 
-  ShieldCheck, 
-  Star, 
-  Wrench, 
-  Hammer, 
-  Check, 
-  ArrowRight, 
-  Phone, 
-  HelpCircle, 
-  MapPin, 
-  Mail, 
-  Lock, 
-  ThumbsUp, 
-  Shield, 
-  Users, 
+import React, { useState } from "react";
+import {
+  Sparkles,
+  Clock,
+  ShieldCheck,
+  Star,
+  Wrench,
+  Hammer,
+  Check,
+  ArrowRight,
+  Phone,
+  HelpCircle,
+  MapPin,
+  Mail,
+  Lock,
+  ThumbsUp,
+  Shield,
+  Users,
   BadgePercent,
   CheckCircle,
   Truck,
   ChevronDown,
-  ChevronUp
-} from 'lucide-react';
-import { PageId } from '../types';
-import { QuoteForm } from './QuoteForm';
+  ChevronUp,
+} from "lucide-react";
+import { PageId } from "../types";
+import { QuoteForm } from "./QuoteForm";
 
 interface HomeSectionsProps {
   onNavigate: (pageId: PageId) => void;
@@ -44,7 +44,7 @@ export const HeroSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => {
       {/* Decorative ambient gradients */}
       <div className="absolute top-0 right-0 w-[45rem] h-[45rem] bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-10 w-[30rem] h-[30rem] bg-brand-accent/5 rounded-full blur-3xl pointer-events-none" />
-      
+
       {/* Abstract technical pattern overlay for precision appearance */}
       <div className="absolute inset-0 bg-space-pattern opacity-[0.03] pointer-events-none mix-blend-overlay" />
 
@@ -55,23 +55,29 @@ export const HeroSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => {
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse inline-block" />
             Active Route: Broward & Palm Beach Service Stands
           </div>
-          
+
           <div className="space-y-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight font-heading">
-              Professional Garage Door <span className="text-amber-400 block sm:inline">Repair in Florida</span>
+              Professional Garage Door{" "}
+              <span className="text-amber-400 block sm:inline">
+                Repair in Florida
+              </span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Stuck vehicle? Snapped tension springs? Our South Florida referral network matches you with bonded, licensed technicians for <strong>immediate driveway dispatch</strong>. Safe, honest, and completely flat-trip rated.
+              Stuck vehicle? Snapped tension springs? Our South Florida referral
+              network matches you with bonded, licensed technicians for{" "}
+              <strong>immediate driveway dispatch</strong>. Safe, honest, and
+              completely flat-trip rated.
             </p>
           </div>
 
           {/* Quick core conversion bullets */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-w-lg mx-auto lg:mx-0 text-left text-xs sm:text-sm text-slate-200">
             {[
-              'Snapped torsion springs replaced safe',
-              'Automatic quiet opener diagnostics',
-              'Broward County & Palm Beach dispatch',
-              'Written parts & mechanical guarantees'
+              "Snapped torsion springs replaced safe",
+              "Automatic quiet opener diagnostics",
+              "Broward County & Palm Beach dispatch",
+              "Written parts & mechanical guarantees",
             ].map((text, i) => (
               <div key={i} className="flex items-center gap-3">
                 <div className="w-5 h-5 bg-blue-500/20 border border-blue-500/30 rounded-full flex items-center justify-center text-blue-400 flex-shrink-0">
@@ -104,14 +110,17 @@ export const HeroSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => {
           {/* Trust indicators / Badge blocks */}
           <div className="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center lg:text-left">
             {[
-              { label: 'Same Day Service', desc: 'Call by 2 PM' },
-              { label: 'Licensed Teams', desc: 'Bonded Florida crews' },
-              { label: 'Emergency Repair', desc: 'Stuck vehicle safety' },
-              { label: 'Honest Pricing', desc: 'No hidden spikes' }
+              { label: "Licensed Teams", desc: "Bonded Florida crews" },
+              { label: "Emergency Repair", desc: "Stuck vehicle safety" },
+              { label: "Honest Pricing", desc: "No hidden spikes" },
             ].map((badge, i) => (
               <div key={i} className="space-y-1">
-                <div className="text-amber-400 font-extrabold text-xs uppercase tracking-wider">{badge.label}</div>
-                <div className="text-slate-400 text-[11px] font-medium">{badge.desc}</div>
+                <div className="text-amber-400 font-extrabold text-xs uppercase tracking-wider">
+                  {badge.label}
+                </div>
+                <div className="text-slate-400 text-[11px] font-medium">
+                  {badge.desc}
+                </div>
               </div>
             ))}
           </div>
@@ -136,60 +145,71 @@ export const HeroSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => {
  * 2. OUR SERVICES SECTION
  * Custom styled grid displaying 6 services requested by user.
  */
-export const OurServicesSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => {
+export const OurServicesSection: React.FC<HomeSectionsProps> = ({
+  onNavigate,
+}) => {
   const customServices = [
     {
-      id: 'service-spring',
-      title: 'Garage Door Spring Repair',
+      id: "service-spring",
+      title: "Garage Door Spring Repair",
       icon: <LayersIcon />,
-      description: 'High-tension system replacements for sheared torsion or extension springs. Correct calibration ensures reliable, balanced manual operations.',
-      bullet: 'High-Cycle Calibrated Springs',
-      routeId: 'service-spring' as PageId
+      description:
+        "High-tension system replacements for sheared torsion or extension springs. Correct calibration ensures reliable, balanced manual operations.",
+      bullet: "High-Cycle Calibrated Springs",
+      routeId: "service-spring" as PageId,
     },
     {
-      id: 'service-opener',
-      title: 'Garage Door Opener Repair',
+      id: "service-opener",
+      title: "Garage Door Opener Repair",
       icon: <WrenchIcon />,
-      description: 'Quiet-drive belt and chain automatic troubleshooting. LiftMaster, Chamberlain, and Genie board and sensory aligners on stand-by.',
-      bullet: 'Photo-eye Safety Diagnostics',
-      routeId: 'service-opener' as PageId
+      description:
+        "Quiet-drive belt and chain automatic troubleshooting. LiftMaster, Chamberlain, and Genie board and sensory aligners on stand-by.",
+      bullet: "Photo-eye Safety Diagnostics",
+      routeId: "service-opener" as PageId,
     },
     {
-      id: 'service-emergency',
-      title: 'Emergency Garage Door Repair',
+      id: "service-emergency",
+      title: "Emergency Garage Door Repair",
       icon: <EmergencyIcon />,
-      description: 'Fast, secure routing for vehicles stuck inside, crooked doors off vertical tracks, or severe storm-blown panels exposing homes.',
-      bullet: '90-Min Dispatch Benchmark',
-      routeId: 'service-emergency' as PageId
+      description:
+        "Fast, secure routing for vehicles stuck inside, crooked doors off vertical tracks, or severe storm-blown panels exposing homes.",
+      bullet: "90-Min Dispatch Benchmark",
+      routeId: "service-emergency" as PageId,
     },
     {
-      id: 'service-affordable',
-      title: 'Garage Door Repair (General)',
+      id: "service-affordable",
+      title: "Garage Door Repair (General)",
       icon: <HammerIcon />,
-      description: 'Structural component checks, steel cables re-wound, rusty rollers replaced with high-durability nylon wheels for silent operations.',
-      bullet: '12-point Safety Audits',
-      routeId: 'service-affordable' as PageId
+      description:
+        "Structural component checks, steel cables re-wound, rusty rollers replaced with high-durability nylon wheels for silent operations.",
+      bullet: "12-point Safety Audits",
+      routeId: "service-affordable" as PageId,
     },
     {
-      id: 'service-newdoor',
-      title: 'Garage Door Installation',
+      id: "service-newdoor",
+      title: "Garage Door Installation",
       icon: <HomeIcon />,
-      description: 'Windload hurricane-rated steel reinforcements fitted for South Florida storm seasons. Enhances properties with security insulation.',
-      bullet: 'Hurricane Windload Insured',
-      routeId: 'services' as PageId
+      description:
+        "Windload hurricane-rated steel reinforcements fitted for South Florida storm seasons. Enhances properties with security insulation.",
+      bullet: "Hurricane Windload Insured",
+      routeId: "services" as PageId,
     },
     {
-      id: 'service-tuneup',
-      title: 'Garage Door Maintenance',
+      id: "service-tuneup",
+      title: "Garage Door Maintenance",
       icon: <ShieldIcon />,
-      description: 'Preventative tune-ups, joint lubrication, visual frame tests, and spring tension checks to avoid high emergency breakdown expenses.',
-      bullet: 'Silicon Coating Lubrications',
-      routeId: 'services' as PageId
-    }
+      description:
+        "Preventative tune-ups, joint lubrication, visual frame tests, and spring tension checks to avoid high emergency breakdown expenses.",
+      bullet: "Silicon Coating Lubrications",
+      routeId: "services" as PageId,
+    },
   ];
 
   return (
-    <section className="py-20 bg-slate-50 border-b border-slate-200" id="services-section">
+    <section
+      className="py-20 bg-slate-50 border-b border-slate-200"
+      id="services-section"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold text-blue-700 uppercase tracking-widest bg-blue-100/80 py-1.5 px-4 rounded-full border border-blue-200">
@@ -200,13 +220,15 @@ export const OurServicesSection: React.FC<HomeSectionsProps> = ({ onNavigate }) 
           </h2>
           <div className="w-16 h-1.5 bg-blue-600 rounded-full mx-auto mt-4 mb-4" />
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            The heaviest mechanical apparatus in your household should only be managed by verified partners. We guarantee same-day solutions across Broward and Palm Beach counties.
+            The heaviest mechanical apparatus in your household should only be
+            managed by verified partners. We guarantee same-day solutions across
+            Broward and Palm Beach counties.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {customServices.map((svc) => (
-            <div 
+            <div
               key={svc.id}
               className="bg-white rounded-2xl border border-slate-200/80 shadow-md hover:shadow-xl hover:border-blue-200 hover:translate-y-[-2px] transition-all p-6 sm:p-8 flex flex-col justify-between group"
             >
@@ -228,7 +250,7 @@ export const OurServicesSection: React.FC<HomeSectionsProps> = ({ onNavigate }) 
                 <span className="text-[10px] text-emerald-600 bg-emerald-50 border border-emerald-100 py-1 px-2.5 rounded-full font-bold">
                   {svc.bullet}
                 </span>
-                <button 
+                <button
                   onClick={() => onNavigate(svc.routeId)}
                   className="text-xs font-bold text-slate-900 hover:text-blue-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform cursor-pointer"
                 >
@@ -247,7 +269,9 @@ export const OurServicesSection: React.FC<HomeSectionsProps> = ({ onNavigate }) 
  * 3. BOOK CALL SECTION
  * Conversion optimized, urgent actions
  */
-export const BookCallSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => {
+export const BookCallSection: React.FC<HomeSectionsProps> = ({
+  onNavigate,
+}) => {
   return (
     <section className="bg-slate-900 text-white py-16 relative overflow-hidden border-y border-slate-950">
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-600 via-amber-400 to-emerald-500" />
@@ -260,7 +284,10 @@ export const BookCallSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => 
             Emergency Dispatch Line Active Across Florida
           </h2>
           <p className="text-slate-350 text-xs sm:text-sm max-w-2xl leading-relaxed">
-            Locked inside our garage? Snapped torsion cables with vehicle trapped? Do not try manual release on loaded mechanisms. We maintain on-call technical drivers with full part selections to secure your system inside 90 minutes.
+            Locked inside our garage? Snapped torsion cables with vehicle
+            trapped? Do not try manual release on loaded mechanisms. We maintain
+            on-call technical drivers with full part selections to secure your
+            system inside 90 minutes.
           </p>
         </div>
         <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 w-full max-w-xs mx-auto">
@@ -289,30 +316,41 @@ export const BookCallSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => 
  */
 export const AboutSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => {
   return (
-    <section className="py-20 bg-white border-b border-slate-200" id="about-section">
+    <section
+      className="py-20 bg-white border-b border-slate-200"
+      id="about-section"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left column: Supporting images/graphic stats */}
         <div className="lg:col-span-5 relative">
           <div className="space-y-4">
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md h-72 sm:h-96">
-              <img 
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800" 
+              <img
+                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800"
                 alt="Florida Certified Garage Technician repairing overhead system"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 text-white space-y-1">
-                <span className="text-[10px] uppercase font-mono tracking-widest text-amber-400 bg-slate-900/40 px-2 py-0.5 rounded-sm">On-Site Logistics</span>
-                <p className="font-extrabold text-base">Florida Fully-Stocked Service Trucks</p>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-amber-400 bg-slate-900/40 px-2 py-0.5 rounded-sm">
+                  On-Site Logistics
+                </span>
+                <p className="font-extrabold text-base">
+                  Florida Fully-Stocked Service Trucks
+                </p>
               </div>
             </div>
           </div>
-          
+
           {/* Overlay pill widget with stats */}
           <div className="absolute -bottom-6 -right-5 sm:right-6 bg-slate-900 text-white rounded-xl border border-slate-755 p-4 sm:p-5 shadow-xl max-w-xs space-y-1 hidden sm:block">
-            <div className="text-2xl font-extrabold text-amber-400">10,000+</div>
-            <p className="text-[10px] text-slate-300 font-bold uppercase tracking-wider">Successful Spring & Opener Jobs Reassigned</p>
+            <div className="text-2xl font-extrabold text-amber-400">
+              10,000+
+            </div>
+            <p className="text-[10px] text-slate-300 font-bold uppercase tracking-wider">
+              Successful Spring & Opener Jobs Reassigned
+            </p>
           </div>
         </div>
 
@@ -329,32 +367,47 @@ export const AboutSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => {
 
           <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
             <p>
-              Florida Garage Door Repair serves as Broward and Palm Beach Counties’ most reliable <strong>referral agency</strong> resource. We keep our local service routes lined with vetted garage mechanics to insulate home owners from common contracting bottlenecks.
+              Florida Garage Door Repair serves as Broward and Palm Beach
+              Counties’ most reliable <strong>referral agency</strong> resource.
+              We keep our local service routes lined with vetted garage
+              mechanics to insulate home owners from common contracting
+              bottlenecks.
             </p>
-            <p>
-              Under strict LeadSmart LLC compliance, we do not utilize coercive pricing patterns or misleading guarantees. Our local partners deliver transparent itemized quotes before repairing. That means predictable, honest charges covering quality industrial hardware designed to resist South Florida coastal salt and high tropical humidity.
-            </p>
+         
           </div>
 
           {/* Icon lists */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { title: 'Vetted Florida Crews', desc: 'Background-verified, licensed, and insured field veterans.' },
-              { title: 'Genuine Part Sourcing', desc: 'No-shear solid hardware rated for 15,000+ open-close cycles.' }
+              {
+                title: "Vetted Florida Crews",
+                desc: "Background-verified, licensed, and insured field veterans.",
+              },
+              {
+                title: "Genuine Part Sourcing",
+                desc: "No-shear solid hardware rated for 15,000+ open-close cycles.",
+              },
             ].map((item, idx) => (
-              <div key={idx} className="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <div
+                key={idx}
+                className="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5"
+              >
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span className="font-extrabold text-slate-900 text-xs sm:text-sm">{item.title}</span>
+                  <span className="font-extrabold text-slate-900 text-xs sm:text-sm">
+                    {item.title}
+                  </span>
                 </div>
-                <p className="text-slate-500 text-[11px] sm:text-xs leading-relaxed">{item.desc}</p>
+                <p className="text-slate-500 text-[11px] sm:text-xs leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
 
           <div>
-            <button 
-              onClick={() => onNavigate('about')}
+            <button
+              onClick={() => onNavigate("about")}
               className="bg-slate-900 hover:bg-slate-800 text-white font-extrabold py-3 px-6 rounded-lg text-xs transition-colors cursor-pointer"
             >
               Learn More About Our Team & Ethics
@@ -370,26 +423,50 @@ export const AboutSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => {
  * 5. AREAS WE SERVE SECTION
  * Elegant Broward & Palm Beach structures with clickable active routes
  */
-export const AreasWeServeSection: React.FC<HomeSectionsProps> = ({ onNavigate }) => {
+export const AreasWeServeSection: React.FC<HomeSectionsProps> = ({
+  onNavigate,
+}) => {
   const regions = [
     {
-      id: 'area-broward',
-      county: 'Broward County',
-      title: 'Same-day active routes spanning Fort Lauderdale & Broward interior sectors',
-      cities: ['Fort Lauderdale', 'Hollywood', 'Pembroke Pines', 'Coral Springs', 'Miramar', 'Pompano Beach', 'Davie', 'Plantation']
+      id: "area-broward",
+      county: "Broward County",
+      title:
+        "Same-day active routes spanning Fort Lauderdale & Broward interior sectors",
+      cities: [
+        "Fort Lauderdale",
+        "Hollywood",
+        "Pembroke Pines",
+        "Coral Springs",
+        "Miramar",
+        "Pompano Beach",
+        "Davie",
+        "Plantation",
+      ],
     },
     {
-      id: 'area-palm-beach',
-      county: 'Palm Beach County',
-      title: 'Reliable seaside service routing through West Palm beach & coastal hubs',
-      cities: ['Boca Raton', 'West Palm Beach', 'Delray Beach', 'Boynton Beach', 'Wellington', 'Jupiter', 'Palm Beach Gardens', 'Lake Worth Beach']
-    }
+      id: "area-palm-beach",
+      county: "Palm Beach County",
+      title:
+        "Reliable seaside service routing through West Palm beach & coastal hubs",
+      cities: [
+        "Boca Raton",
+        "West Palm Beach",
+        "Delray Beach",
+        "Boynton Beach",
+        "Wellington",
+        "Jupiter",
+        "Palm Beach Gardens",
+        "Lake Worth Beach",
+      ],
+    },
   ];
 
   return (
-    <section className="py-20 bg-slate-55 border-b border-slate-200" id="areas-section">
+    <section
+      className="py-20 bg-slate-55 border-b border-slate-200"
+      id="areas-section"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold text-blue-700 uppercase tracking-widest bg-blue-105 py-1 px-3.5 rounded-full border border-blue-200 shadow-xs">
             Guaranteed Service Area
@@ -399,13 +476,15 @@ export const AreasWeServeSection: React.FC<HomeSectionsProps> = ({ onNavigate })
           </h2>
           <div className="w-16 h-1.5 bg-blue-600 rounded-full mx-auto mt-4 mb-4" />
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            We operate fully staffed standby dispatch trucks across South Florida. Click any region or city below for precise neighborhood zip routing:
+            We operate fully staffed standby dispatch trucks across South
+            Florida. Click any region or city below for precise neighborhood zip
+            routing:
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {regions.map((region) => (
-            <div 
+            <div
               key={region.id}
               className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between"
             >
@@ -421,7 +500,7 @@ export const AreasWeServeSection: React.FC<HomeSectionsProps> = ({ onNavigate })
                 <p className="text-xs text-slate-500 font-medium italic">
                   {region.title}
                 </p>
-                
+
                 {/* Cities listing */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-2">
                   {region.cities.map((city) => (
@@ -461,41 +540,37 @@ export const FAQSection: React.FC<HomeSectionsProps> = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   const faqs = [
+   
     {
-      q: 'What is the average cost of a garage door spring replacement in Florida?',
-      a: 'A single torsion spring replacement averages $180 to $290 (or $250 to $450 for double spring configurations) including parts calibration and system alignment. This depends on factors like door weight, gauge thickness, and cycle rating (10,000 vs 20,000 high-durability setups). We represent local networks that perform clear on-site tests and provide written estimates before commencing.'
+      q: "Do you offer emergency garage door repair on weekends and evenings?",
+      a: "Yes, we provide emergency vehicle dispatch routing 24/7. When facing home compromises or trapped cars, we assign nearby standby trucks. Emergency service rates are explained clearly by phone to avoid unexpected bill shocks.",
     },
     {
-      q: 'Do you offer emergency garage door repair on weekends and evenings?',
-      a: 'Yes, we provide emergency vehicle dispatch routing 24/7. When facing home compromises or trapped cars, we assign nearby standby trucks. Emergency service rates are explained clearly by phone to avoid unexpected bill shocks.'
+      q: "How do Florida hot and humid environments affect automatic operations?",
+      a: "Florida salt air and high summer humidity cause steel torsion springs to rust rapidly, which increases coil friction and leads to immediate stress fracturing. Opener electrical chips can also fail due to regular voltage brownouts and thunderstorm surges. Regular silicon lubrication on springs and surge protectors on outlets significantly improve equipment life.",
     },
     {
-      q: 'How do Florida hot and humid environments affect automatic operations?',
-      a: 'Florida salt air and high summer humidity cause steel torsion springs to rust rapidly, which increases coil friction and leads to immediate stress fracturing. Opener electrical chips can also fail due to regular voltage brownouts and thunderstorm surges. Regular silicon lubrication on springs and surge protectors on outlets significantly improve equipment life.'
+      q: "Can I perform DIY adjustments on garage-door chain openers?",
+      a: "You can adjust minor photo-eye sensor heights or clean structural tracks. However, we strongly caution against adjusting bottom brackets, steel cables, or wound springs without professional training. These parts operate under a loaded torque force of several hundred foot-pounds and can snap causing instant physical injury.",
     },
     {
-      q: 'Can I perform DIY adjustments on garage-door chain openers?',
-      a: 'You can adjust minor photo-eye sensor heights or clean structural tracks. However, we strongly caution against adjusting bottom brackets, steel cables, or wound springs without professional training. These parts operate under a loaded torque force of several hundred foot-pounds and can snap causing instant physical injury.'
+      q: "Do you provide guarantees on parts and labor completed?",
+      a: "Yes. Our matched Florida partner programs provide written guarantees on all replacement springs, tracks, opener circuits, and service labor. Standard component warranties range from 1 to 5 years, guaranteeing long-term mechanical reliability.",
     },
     {
-      q: 'Do you provide guarantees on parts and labor completed?',
-      a: 'Yes. Our matched Florida partner programs provide written guarantees on all replacement springs, tracks, opener circuits, and service labor. Standard component warranties range from 1 to 5 years, guaranteeing long-term mechanical reliability.'
+      q: "How frequently should a heavy double garage door be serviced?",
+      a: "We recommend scheduling a mechanical safety check at least once every 12 months. This includes a 12-point track alignment verify, spring balance tests, moving joint lubrication, and automatic reversing system compliance tests.",
     },
-    {
-      q: 'How frequently should a heavy double garage door be serviced?',
-      a: 'We recommend scheduling a mechanical safety check at least once every 12 months. This includes a 12-point track alignment verify, spring balance tests, moving joint lubrication, and automatic reversing system compliance tests.'
-    }
   ];
 
   return (
-    <section 
-      className="py-20 bg-slate-900 text-white border-t border-slate-950" 
+    <section
+      className="py-20 bg-slate-900 text-white border-t border-slate-950"
       id="faq-section"
-      itemScope 
+      itemScope
       itemType="https://schema.org/FAQPage"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div className="text-center mb-16">
           <span className="text-xs text-amber-400 font-extrabold uppercase tracking-widest bg-slate-800 py-1.5 px-4 rounded-full border border-slate-755 shadow-sm">
             Consumer Support Center
@@ -505,7 +580,9 @@ export const FAQSection: React.FC<HomeSectionsProps> = () => {
           </h2>
           <div className="w-16 h-1.5 bg-blue-600 rounded-full mx-auto mt-4 mb-4" />
           <p className="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
-            Review detailed answers below regarding mechanical safety, coastal rust prevention, standard local repair rates, and same-day service dispatch guarantees.
+            Review detailed answers below regarding mechanical safety, coastal
+            rust prevention, standard local repair rates, and same-day service
+            dispatch guarantees.
           </p>
         </div>
 
@@ -513,11 +590,11 @@ export const FAQSection: React.FC<HomeSectionsProps> = () => {
           {faqs.map((faq, i) => {
             const isOpen = openIdx === i;
             return (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="bg-slate-950 rounded-xl border border-slate-800 overflow-hidden transition-all duration-300"
-                itemProp="mainEntity" 
-                itemScope 
+                itemProp="mainEntity"
+                itemScope
                 itemType="https://schema.org/Question"
               >
                 {/* Accordion trigger with schema content */}
@@ -525,7 +602,10 @@ export const FAQSection: React.FC<HomeSectionsProps> = () => {
                   onClick={() => setOpenIdx(isOpen ? null : i)}
                   className="w-full flex items-center justify-between p-5 text-left font-bold text-sm sm:text-base text-white hover:bg-slate-900 transition-colors focus:outline-none cursor-pointer"
                 >
-                  <span itemProp="name" className="pr-4 leading-snug flex items-start gap-2.5">
+                  <span
+                    itemProp="name"
+                    className="pr-4 leading-snug flex items-start gap-2.5"
+                  >
                     <HelpCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                     {faq.q}
                   </span>
@@ -537,15 +617,18 @@ export const FAQSection: React.FC<HomeSectionsProps> = () => {
                 </button>
 
                 {/* Accordion answer with schema content */}
-                <div 
+                <div
                   className={`transition-all duration-300 overflow-hidden ${
-                    isOpen ? 'max-h-96 border-t border-slate-800' : 'max-h-0'
+                    isOpen ? "max-h-96 border-t border-slate-800" : "max-h-0"
                   }`}
-                  itemProp="acceptedAnswer" 
-                  itemScope 
+                  itemProp="acceptedAnswer"
+                  itemScope
                   itemType="https://schema.org/Answer"
                 >
-                  <div className="p-5 text-xs sm:text-sm text-slate-350 leading-relaxed font-light" itemProp="text">
+                  <div
+                    className="p-5 text-xs sm:text-sm text-slate-350 leading-relaxed font-light"
+                    itemProp="text"
+                  >
                     {faq.a}
                   </div>
                 </div>
@@ -564,21 +647,25 @@ export const FAQSection: React.FC<HomeSectionsProps> = () => {
  */
 export const GetInTouchForm: React.FC<HomeSectionsProps> = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    service: 'general',
-    message: ''
+    name: "",
+    phone: "",
+    email: "",
+    service: "general",
+    message: "",
   });
 
   const [formState, setFormState] = useState<{
-    status: 'idle' | 'submitting' | 'success';
+    status: "idle" | "submitting" | "success";
     error: string | null;
-  }>({ status: 'idle', error: null });
+  }>({ status: "idle", error: null });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -586,25 +673,34 @@ export const GetInTouchForm: React.FC<HomeSectionsProps> = () => {
     const { name, phone, email } = formData;
 
     if (!name.trim() || !phone.trim() || !email.trim()) {
-      setFormState({ status: 'idle', error: 'Please enter your name, email, and phone number.' });
+      setFormState({
+        status: "idle",
+        error: "Please enter your name, email, and phone number.",
+      });
       return;
     }
 
     // Basic email validation
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
-      setFormState({ status: 'idle', error: 'Please enter a valid email address.' });
+      setFormState({
+        status: "idle",
+        error: "Please enter a valid email address.",
+      });
       return;
     }
 
-    setFormState({ status: 'submitting', error: null });
+    setFormState({ status: "submitting", error: null });
 
     setTimeout(() => {
-      setFormState({ status: 'success', error: null });
+      setFormState({ status: "success", error: null });
     }, 1200);
   };
 
   return (
-    <section className="py-20 bg-white border-b border-slate-200" id="contact-form-section">
+    <section
+      className="py-20 bg-white border-b border-slate-200"
+      id="contact-form-section"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-xs font-bold text-blue-700 uppercase tracking-widest bg-blue-50 py-1.5 px-3 rounded-full border border-blue-100">
@@ -615,24 +711,35 @@ export const GetInTouchForm: React.FC<HomeSectionsProps> = () => {
           </h2>
           <div className="w-16 h-1.5 bg-blue-600 rounded-full mx-auto mt-4 mb-4" />
           <p className="text-slate-500 text-xs sm:text-sm">
-            Fill out your details below to schedule custom storm door installations, major mechanical diagnostics or general repairs.
+            Fill out your details below to schedule custom storm door
+            installations, major mechanical diagnostics or general repairs.
           </p>
         </div>
 
         <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm">
-          {formState.status === 'success' ? (
+          {formState.status === "success" ? (
             <div className="text-center py-8 space-y-4">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-50 border border-emerald-200 rounded-full text-emerald-600">
                 <Check className="w-8 h-8 stroke-[3px]" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900">Form Processed Safely</h3>
+              <h3 className="text-xl font-bold text-slate-900">
+                Form Processed Safely
+              </h3>
               <p className="text-slate-650 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
-                Thank you for your request. A certified diagnostics agent representing our South Florida routing centers will email or call you shortly.
+                Thank you for your request. A certified diagnostics agent
+                representing our South Florida routing centers will email or
+                call you shortly.
               </p>
               <button
                 onClick={() => {
-                  setFormData({ name: '', phone: '', email: '', service: 'general', message: '' });
-                  setFormState({ status: 'idle', error: null });
+                  setFormData({
+                    name: "",
+                    phone: "",
+                    email: "",
+                    service: "general",
+                    message: "",
+                  });
+                  setFormState({ status: "idle", error: null });
                 }}
                 className="text-xs font-bold text-blue-700 hover:underline cursor-pointer"
               >
@@ -708,9 +815,15 @@ export const GetInTouchForm: React.FC<HomeSectionsProps> = () => {
                     <option value="general">Select Service Category</option>
                     <option value="spring">Garage Springs replacement</option>
                     <option value="opener">Automatic Opener repairs</option>
-                    <option value="emergency">Emergency sideways door jam</option>
-                    <option value="maintenance">Preventative Safety Tune-up</option>
-                    <option value="installation">hurricane Storm door installation</option>
+                    <option value="emergency">
+                      Emergency sideways door jam
+                    </option>
+                    <option value="maintenance">
+                      Preventative Safety Tune-up
+                    </option>
+                    <option value="installation">
+                      hurricane Storm door installation
+                    </option>
                   </select>
                 </div>
               </div>
@@ -731,10 +844,12 @@ export const GetInTouchForm: React.FC<HomeSectionsProps> = () => {
 
               <button
                 type="submit"
-                disabled={formState.status === 'submitting'}
+                disabled={formState.status === "submitting"}
                 className="w-full bg-slate-900 hover:bg-slate-800 text-white font-extrabold py-3.5 rounded-lg text-xs tracking-wider uppercase transition-all shadow-md cursor-pointer text-center justify-center"
               >
-                {formState.status === 'submitting' ? 'Processing Securely...' : 'Request Diagnostics'}
+                {formState.status === "submitting"
+                  ? "Processing Securely..."
+                  : "Request Diagnostics"}
               </button>
             </form>
           )}
@@ -744,116 +859,106 @@ export const GetInTouchForm: React.FC<HomeSectionsProps> = () => {
   );
 };
 
-/**
- * 8. TRUST / TESTIMONIALS SECTION
- */
-export const GetTestimonialsSection: React.FC = () => {
-  const testimonials = [
-    {
-      name: 'Michael K.',
-      role: 'Homeowner',
-      location: 'Fort Lauderdale, FL',
-      quote: 'Excellent emergency response! Our overhead spring snapped at 7:30 PM, trapping both family cars. The matched technician arrived within 90 minutes. High cycle springs installed with written certification. Highly satisfied with clean, transparent pricing.',
-      rating: 5
-    },
-    {
-      name: 'Theresa J.',
-      role: 'Property Owner',
-      location: 'Boca Raton, FL',
-      quote: 'Replaced our extremely loud chain mechanism with a quiet belt-driven smart system. The quote matched the work page perfectly. Polite, fast, and took precautions during hurricane track reinforcing. Safe to recommend anytime.',
-      rating: 5
-    },
-    {
-      name: 'Raymond G.',
-      role: 'Residential Manager',
-      location: 'Coral Springs, FL',
-      quote: 'I had standard rate quotes comparison and this team facilitated the best deal for the storm package. They repaired three rollers and adjusted cable friction values within the first diagnostic check. Solid, honest crew.',
-      rating: 5
-    }
-  ];
 
-  return (
-    <section className="py-20 bg-slate-100 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold text-blue-700 uppercase tracking-widest bg-white py-1.5 px-4.5 rounded-full border border-slate-200 shadow-xs">
-            True Experiences
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4 leading-tight font-heading">
-            Florida Homeowners Testimonials
-          </h2>
-          <div className="w-16 h-1.5 bg-blue-600 rounded-full mx-auto mt-4 mb-4" />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t, idx) => (
-            <div 
-              key={idx} 
-              className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-205 shadow-md flex flex-col justify-between"
-            >
-              <div className="space-y-4">
-                {/* Rating stars */}
-                <div className="flex gap-1">
-                  {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 stroke-amber-400" />
-                  ))}
-                </div>
-                <p className="text-slate-600 text-xs sm:text-sm italic leading-relaxed">
-                  "{t.quote}"
-                </p>
-              </div>
-
-              <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
-                <div>
-                  <h4 className="font-extrabold text-slate-900 text-xs sm:text-sm">{t.name}</h4>
-                  <p className="text-slate-400 text-[10px] sm:text-xs">{t.role}</p>
-                </div>
-                <span className="text-[10px] text-slate-400 font-bold bg-slate-50 border border-slate-150 py-1 px-2.5 rounded">
-                  {t.location}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 /* --- Custom SVG Micro-Icons for standalone styling flexibility --- */
 const LayersIcon = () => (
-  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+    />
   </svg>
 );
 
 const WrenchIcon = () => (
-  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0x" />
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+    />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M15 12a3 3 0 11-6 0 3 3 0 016 0x"
+    />
   </svg>
 );
 
 const EmergencyIcon = () => (
-  <svg className="w-6 h-6 animate-pulse text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+  <svg
+    className="w-6 h-6 animate-pulse text-red-500"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+    />
   </svg>
 );
 
 const HammerIcon = () => (
-  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1" />
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1"
+    />
   </svg>
 );
 
 const HomeIcon = () => (
-  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+    />
   </svg>
 );
 
 const ShieldIcon = () => (
-  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+    />
   </svg>
 );

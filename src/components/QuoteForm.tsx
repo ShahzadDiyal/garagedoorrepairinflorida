@@ -253,7 +253,7 @@ export const QuoteForm: React.FC<{ serviceDefault?: string }> = ({ serviceDefaul
           </button>
 
           <p className="text-[10px] text-slate-400 text-center leading-relaxed">
-            By submitting, you agree to receive follow-up contact regarding home services. We respect your security; no false guarantees or hidden fee spikes. Fully compliant with LeadSmart advertising transparency.
+            By submitting, you agree to receive follow-up contact regarding home services. We respect your security; no false guarantees or hidden fee spikes. 
           </p>
         </form>
       )}

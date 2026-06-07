@@ -309,9 +309,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   )}
                 </button>
 
-                <p className="text-[10px] text-slate-400 text-center leading-relaxed">
-                  * Safe routing disclosure: Under LeadSmart LLC compliance, we do not utilize bait-and-switch pricing or collect sensitive credential inputs. Vetted local garage technicians perform diagnostics under direct part warranty.
-                </p>
+                
               </form>
             )}
 

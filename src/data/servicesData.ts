@@ -47,7 +47,7 @@ export const servicesData: ServiceDetail[] = [
     id: 'service-opener',
     title: 'Garage Door Opener Repair Florida',
     shortDescription: 'Diagnostic and repair services for belt, chain, and screw drive automatic openers. Smart connectivity setups.',
-    longDescription: 'An automatic garage door opener provides convenience and critical security for your home. When your opener malfunctions—whether it runs but does not move the door, makes unusual grinding noises, or ignores your remote controls—you need a swift, expert diagnosis. Our Florida technicians are experts in troubleshooting residential automatic openers from top manufacturers, including LiftMaster, Chamberlin, and Genie, resolving electrical, mechanical, and safety sensor issues.',
+    longDescription: 'An automatic garage door opener provides convenience and critical security for your home. When your opener malfunctions whether it runs but does not move the door, makes unusual grinding noises, or ignores your remote controls you need a swift, expert diagnosis. Our Florida technicians are experts in troubleshooting residential automatic openers from top manufacturers, including LiftMaster, Chamberlin, and Genie, resolving electrical, mechanical, and safety sensor issues.',
     mainImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800',
     benefits: [
       'Accurate sensor alignments and safety auto-reverse testing',

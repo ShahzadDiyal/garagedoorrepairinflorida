@@ -202,7 +202,7 @@ export const SEOManager: React.FC<SEOManagerProps> = ({ currentPage }) => {
       '@context': 'https://schema.org',
       '@type': 'HomeAndConstructionBusiness',
       'name': 'Florida Garage Door Repair',
-      'alternateName': 'Florida LeadSmart Garage Coordinators',
+      'alternateName': 'Florida Garage Coordinators',
       'description': 'Certified same-day garage door spring replacement, track alignment, and automatic opener motor repairs in South Florida.',
       'url': siteUrl,
       'telephone': '+1-800-555-0199',

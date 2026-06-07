@@ -28,11 +28,7 @@ interface AboutPageProps {
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
   const coreValues = [
-    {
-      title: 'Absolute Honesty',
-      icon: <ShieldCheck className="w-6 h-6 text-indigo-600" />,
-      desc: 'No hidden surcharge surprises, no bogus urgent claims, and no selling of unneeded hardware. We operate under transparent LeadSmart LLC billing guidelines.'
-    },
+    
     {
       title: 'Reliability Unmatched',
       icon: <Clock className="w-6 h-6 text-indigo-600" />,
@@ -105,9 +101,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
               Florida Garage Door Repair was founded as a structured solution to a persistent problem: the difficulty South Florida homeowners face in locating licensed, reliable garage technicians when a breakdown strikes. The garage door functions as the single heaviest mechanical feature in standard homes, operating under hundreds of foot-pounds of stored dynamic force. When springs shear or cables loosen, professional help is required immediately.
             </p>
-            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              We developed our specialized referral routing framework in partnership with LeadSmart LLC guidelines to establish a trustworthy link. We analyze, filter, and coordinate standby technical trucks along critical Broward and Palm Beach highways. This guarantees immediate diagnostic dispatches and protects households from rogue, unlicensed contractors.
-            </p>
+          
           </div>
           <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md h-80 sm:h-96">
             <img 
@@ -119,7 +113,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             />
             <div className="absolute inset-x-0 bottom-0 bg-slate-950/80 p-6 text-white border-t border-white/10 flex justify-between items-center">
               <div>
-                <p className="text-xs font-bold font-heading">LeadSmart Verified Route</p>
+                <p className="text-xs font-bold font-heading"> Verified Route</p>
                 <p className="text-[10px] text-slate-400">100% Insured Contractor Pool</p>
               </div>
               <span className="text-[10px] bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 px-2.5 py-1 rounded font-bold uppercase">
@@ -143,7 +137,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             <div className="w-16 h-1.5 bg-indigo-600 rounded-full mx-auto mt-4" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {coreValues.map((val, idx) => (
               <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4 hover:border-indigo-300 hover:-translate-y-1 transition-all duration-300">
                 <div className="w-12 h-12 bg-indigo-50 border border-indigo-100 rounded-xl flex items-center justify-center">
@@ -202,7 +196,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       <section className="py-20 bg-slate-900 text-white border-b border-slate-950">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6 sm:space-y-8">
           <Heart className="w-12 h-12 text-rose-500 mx-auto animate-pulse" />
-          <h2 className="text-2xl sm:text-3xl font-extrabold font-heading">Our Customer Safety Commitment</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">Our Customer Safety Commitment</h2>
           <div className="w-16 h-1.5 bg-blue-600 rounded-full mx-auto" />
           
           <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto">
@@ -218,7 +212,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       {/* 6. CTA SECTION */}
       <section className="py-16 bg-blue-700 text-white relative">
         <div className="max-w-6xl mx-auto px-4 text-center space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-extrabold font-heading">Stuck Overhead Mechanism? Snapped Tension Spring?</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">Stuck Overhead Mechanism? Snapped Tension Spring?</h2>
           <p className="text-blue-100 text-xs sm:text-sm max-w-2xl mx-auto">
             Don't risk injury with complex DIY repairs. Contact our South Florida dispatch specialists immediately to coordinate standard travel-mile dispatch.
           </p>

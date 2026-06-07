@@ -155,10 +155,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
   ];
 
   const reasonsToTrust = [
-    {
-      title: 'LeadSmart Standard-Compliant',
-      desc: 'We strictly follow regulatory recommendations to avoid bait-and-switch quotes. Every pricing element is upfront.'
-    },
+    
     {
       title: 'Fully Stocked Trucks',
       desc: 'Vetted partner vehicles are packed with premium high-cycle springs, aircraft-grade cables, and replacement rollers.'
@@ -331,7 +328,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
           <span className="inline-flex items-center gap-1.5 bg-blue-600/35 border border-white/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" /> Emergency Service Route Standby
           </span>
-          <h2 className="text-3xl font-extrabold font-heading">Complete 12-point Safety Tune-ups Only $49</h2>
+          <h2 className="text-3xl font-extrabold font-heading text-white">Complete 12-point Safety </h2>
           <p className="text-blue-100 text-xs sm:text-sm max-w-xl mx-auto">
             Book our preventative maintenance package before storm season arrives to check track alignment, spring cycle strain, and smart code sensors.
           </p>

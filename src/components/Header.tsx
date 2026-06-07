@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           </div>
           <div>
             <div className="font-heading font-extrabold text-slate-900 leading-none text-base sm:text-lg uppercase tracking-tight flex items-center gap-1">
-              Florida Garage <span className="text-brand-accent">Door Repair</span>
+              Garage Door Repair<span className="text-brand-accent">FL </span>
             </div>
             <p className="text-[10px] text-slate-500 font-semibold tracking-wider uppercase mt-0.5 flex items-center gap-1">
               <ShieldCheck className="w-3 h-3 text-emerald-500" /> Broward & Palm Beach Counties
@@ -129,16 +129,16 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
         </nav>
 
         {/* Right Call CTA components */}
-        <div className="hidden sm:flex flex-col items-end text-right">
+        <div className="hidden sm:flex flex-col items-end text-start">
           <a
             href="tel:8005550199"
-            className="bg-brand-accent hover:bg-brand-accent-hover text-white text-xs font-bold py-2.5 px-4 rounded-md shadow-sm transition-all flex items-center gap-1.5 focus:outline-none cursor-pointer"
+            className="bg-brand-accent hover:bg-brand-accent-hover text-white text-md font-bold py-2.5 px-4 rounded-md shadow-sm transition-all flex items-center gap-1.5 focus:outline-none cursor-pointer"
           >
             <Phone className="w-3.5 h-3.5 fill-white stroke-white animate-bounce" />
-            Call Now For Fast Service
+            Call Now For Fast Service <br /> (800) 555-0199
           </a>
           <span className="text-xs font-extrabold text-slate-800 tracking-tight mt-1 font-heading">
-            (800) 555-0199
+            
           </span>
         </div>
 

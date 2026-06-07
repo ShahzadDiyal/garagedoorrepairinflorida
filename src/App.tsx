@@ -2,7 +2,6 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-
 import React, { useState, useEffect } from 'react';
 import { 
   ShieldCheck, 
@@ -46,7 +45,7 @@ import {
   AreasWeServeSection, 
   FAQSection, 
   GetInTouchForm, 
-  GetTestimonialsSection 
+  // GetTestimonialsSection 
 } from './components/HomeSections';
 
 import { AboutPage } from './components/AboutPage';
@@ -149,7 +148,7 @@ export default function App() {
             </section>
 
             {/* VERIFIED TESTIMONIALS & TRUST STATS */}
-            <GetTestimonialsSection />
+            {/* <GetTestimonialsSection /> */}
             
             {/* ABOUT OUR REFERRAL COMPLIANCE & SAFETY */}
             <AboutSection onNavigate={handleNavigate} />

@@ -215,11 +215,10 @@ export const AreasPage: React.FC<AreasPageProps> = ({ currentPage, onNavigate })
             <div className="flex border-t border-slate-100 pt-5 gap-6 text-xs text-slate-500 font-semibold">
               <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-emerald-600" /> Insured Partners</span>
               <span className="flex items-center gap-1.5"><Truck className="w-4 h-4 text-blue-600" /> 90-Min Dispatch Route</span>
-              <span className="flex items-center gap-1.5"><Award className="w-4 h-4 text-indigo-600" /> LeadSmart Certified</span>
             </div>
           </div>
 
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+          {/* <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm space-y-5">
             <h3 className="font-extrabold text-slate-900 text-sm sm:text-base border-b border-slate-200 pb-3 uppercase tracking-wider">
               Latest Completed Operations in {area.county}
             </h3>
@@ -246,7 +245,7 @@ export const AreasPage: React.FC<AreasPageProps> = ({ currentPage, onNavigate })
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
         </div>
       </section>
@@ -355,7 +354,7 @@ export const AreasPage: React.FC<AreasPageProps> = ({ currentPage, onNavigate })
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
             Same-Day Dispatch Wait times under 90 minutes
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold font-heading">Locked Inside? Broken Spring Hanging dangerously?</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">Locked Inside? Broken Spring Hanging dangerously?</h2>
           <p className="text-blue-100 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
             We route experienced certified techs directly along local county crossroads to perform immediate balance recoveries. Zero hidden surprise surcharge rates.
           </p>

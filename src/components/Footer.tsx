@@ -83,14 +83,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               Florida Garage <span className="text-brand-accent">Door Repair</span>
             </span>
           </div>
-          <p className="text-xs text-slate-400 leading-relaxed">
-            Florida’s trusted gateway for same-day garage door spring replacement, faulty opener repairs, and off-track security restorations. We connect residential properties in Broward and Palm Beach counties with insured, screen-tested local garage door specialists.
-          </p>
-          <div className="text-xs text-slate-500 pt-2 border-t border-slate-800/50 space-y-1">
-            <p>• Emergency dispatch: 24/7 routing</p>
-            <p>• Advertising standards: LeadSmart LLc Compliant</p>
-            <p>• Zero hidden fees or commission pressure</p>
-          </div>
+        
+        
         </div>
 
         {/* Column 2: Quick navigation */}

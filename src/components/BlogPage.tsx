@@ -423,7 +423,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ currentPage, onNavigate }) =
           <div className="text-slate-700 text-xs sm:text-sm leading-relaxed space-y-6 font-light pl-0 whitespace-pre-wrap-custom">
             
             <p id="sec-1" className="font-medium text-slate-700">
-              Living in beautiful South Florida exposes garage door mechanics—consisting of high-tension iron springs, zinc tracks, and nylon sprockets—to challenging coastal winds and continuous seawater air saturation.
+              Living in beautiful South Florida exposes garage door mechanics consisting of high-tension iron springs, zinc tracks, and nylon sprockets to challenging coastal winds and continuous seawater air saturation.
             </p>
 
             <div className="border-l-4 border-amber-500 bg-amber-50/50 p-4 rounded-r-md text-xs italic text-slate-600 font-medium my-4">
@@ -457,13 +457,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ currentPage, onNavigate }) =
               To neutralize corrosive ocean salt spray, spray clear steel parts using high-grade silicone formulations. Ensure the track rollers sit square and level without dragging. When rollers jump the tracks, the entire door assembly faces immediate stress structural issues.
             </p>
 
-            <p id="sec-3" className="pt-4 font-bold text-slate-900 text-sm uppercase tracking-wide">
-              3. Selecting A Vetted Florida Specialist
-            </p>
-            <p>
-              Always prioritize contractors that adhere strictly to LeadSmart standard warranties. Ensure you receive a comprehensive written estimate specifying parts types and expected travel hours before any crew begins dispatches. Our regional technician pool handles replacements standard rates.
-            </p>
-
+           
           </div>
 
           {/* Social share panel */}
