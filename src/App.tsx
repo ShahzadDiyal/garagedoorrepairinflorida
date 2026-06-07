@@ -38,6 +38,16 @@ import { Footer } from './components/Footer';
 import { FloatingCallButton } from './components/FloatingCallButton';
 import { QuoteForm } from './components/QuoteForm';
 import { MapSection } from './components/MapSection';
+import { 
+  HeroSection, 
+  OurServicesSection, 
+  BookCallSection, 
+  AboutSection, 
+  AreasWeServeSection, 
+  FAQSection, 
+  GetInTouchForm, 
+  GetTestimonialsSection 
+} from './components/HomeSections';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
@@ -106,271 +116,43 @@ export default function App() {
         {/* VIEW: HOME PAGE */}
         {/* ========================================================= */}
         {currentPage === 'home' && (
-          <div className="animate-fade-in">
-            {/* HERO COMPONENT WITH CONVERSION ORIENTATION */}
-            <section className="relative bg-slate-900 text-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-slate-900 to-slate-900" />
-              
-              {/* Abstract decorative graphic patterns */}
-              <div className="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none" />
-              <div className="absolute bottom-0 left-10 w-80 h-80 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="animate-fade-in animate-duration-150">
+            {/* HERO MODULE WITH CONVERSION BOX */}
+            <HeroSection onNavigate={handleNavigate} />
+            
+            {/* OUR SERVICES SECTION GRID OF 6 */}
+            <OurServicesSection onNavigate={handleNavigate} />
+            
+            {/* BOOK CALL/URGENT ACTION TRIGGER STRIPE */}
+            <BookCallSection onNavigate={handleNavigate} />
 
-              <div className="max-w-7xl mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-                
-                {/* Left content: Value Props & local authority badges */}
-                <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
-                  <div className="inline-flex items-center gap-1.5 bg-blue-500/10 border border-blue-400/20 py-1.5 px-3 rounded text-emerald-400 text-xs font-bold uppercase tracking-wider">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                    Same-Day Emergency Service Route Active
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight font-heading">
-                      Same-Day Emergency <span className="text-brand-accent block sm:inline">Garage Door Repair</span> Florida
-                    </h1>
-                    <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                      Facing a ruptured spring, crooked track, or frozen opener? We route experienced, licensed, and bonded technicians directly to your South Florida driveway. No fake pricing, just transparent flat-rate repair solutions.
-                    </p>
-                  </div>
-
-                  {/* Bulleted trust guarantees compliant with LeadSmart LLC */}
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-w-xl mx-auto lg:mx-0 text-left text-sm text-slate-200">
-                    <li className="flex items-center gap-2.5">
-                      <div className="w-5 h-5 bg-blue-500/20 border border-blue-500/30 rounded-full flex items-center justify-center text-blue-400 flex-shrink-0">
-                        <Check className="w-3.5 h-3.5 stroke-[3px]" />
-                      </div>
-                      <span><strong>broken springs</strong> replaced safe</span>
-                    </li>
-                    <li className="flex items-center gap-2.5">
-                      <div className="w-5 h-5 bg-blue-500/20 border border-blue-500/30 rounded-full flex items-center justify-center text-blue-400 flex-shrink-0">
-                        <Check className="w-3.5 h-3.5 stroke-[3px]" />
-                      </div>
-                      <span>Automatic openers diagnosed fast</span>
-                    </li>
-                    <li className="flex items-center gap-2.5">
-                      <div className="w-5 h-5 bg-blue-500/20 border border-blue-500/30 rounded-full flex items-center justify-center text-blue-400 flex-shrink-0">
-                        <Check className="w-3.5 h-3.5 stroke-[3px]" />
-                      </div>
-                      <span>Broward & Palm Beach coverage</span>
-                    </li>
-                    <li className="flex items-center gap-2.5">
-                      <div className="w-5 h-5 bg-blue-500/20 border border-blue-500/30 rounded-full flex items-center justify-center text-blue-400 flex-shrink-0">
-                        <Check className="w-3.5 h-3.5 stroke-[3px]" />
-                      </div>
-                      <span>Written warranties on parts & labor</span>
-                    </li>
-                  </ul>
-
-                  {/* Immediate Calls Section */}
-                  <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                    <a
-                      href="tel:8005550199"
-                      className="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold px-8 py-4 rounded-md shadow-lg flex items-center gap-2.5 w-full sm:w-auto text-center justify-center cursor-pointer text-base transition-all scale-100 hover:scale-[1.02]"
-                    >
-                      <Phone className="w-5 h-5 fill-white" />
-                      Call Agent: (800) 555-0199
-                    </a>
-                    <a
-                      href="#quote-form"
-                      className="bg-slate-800 hover:bg-slate-750 text-white font-bold px-6 py-4 rounded-md border border-slate-700 w-full sm:w-auto text-center cursor-pointer text-sm transition-all"
-                    >
-                      Book Online Diagnostics
-                    </a>
-                  </div>
-
-                  {/* Accreditations Row */}
-                  <div className="pt-6 border-t border-slate-800/60 flex flex-wrap justify-center lg:justify-start gap-6 items-center text-xs text-slate-400">
-                    <span className="flex items-center gap-1">
-                      <ShieldCheck className="w-4 h-4 text-emerald-500" /> Insured Local Partners
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Award className="w-4 h-4 text-brand-accent" /> Premium High-Cycle Springs
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Truck className="w-4 h-4 text-blue-400" /> Prompt Neighbor Dispatch
-                    </span>
-                  </div>
-                </div>
-
-                {/* Right Column: Reusable Lead Form */}
-                <div className="lg:col-span-5 w-full max-w-lg mx-auto">
-                  <QuoteForm />
-                </div>
-              </div>
-            </section>
-
-            {/* TRUST CRADLE / TRUST LOGOS */}
-            <section className="bg-white border-b border-slate-200 py-6 sm:py-8 shadow-sm">
-              <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div className="p-2 space-y-1">
-                  <div className="text-xs uppercase tracking-wider text-slate-400 font-bold">Hourly Rates</div>
-                  <div className="text-sm font-extrabold text-slate-800">No Premium Spikes</div>
-                </div>
-                <div className="p-2 space-y-1 border-l border-slate-100">
-                  <div className="text-xs uppercase tracking-wider text-slate-400 font-bold">South FL Coverage</div>
-                  <div className="text-sm font-extrabold text-slate-800">Broward & Palm Beach</div>
-                </div>
-                <div className="p-2 space-y-1 border-l border-slate-100">
-                  <div className="text-xs uppercase tracking-wider text-slate-400 font-bold">Standard Safety</div>
-                  <div className="text-sm font-extrabold text-slate-800">12-Point Inspection</div>
-                </div>
-                <div className="p-2 space-y-1 border-l border-slate-100">
-                  <div className="text-xs uppercase tracking-wider text-slate-400 font-bold">Spare Hardware</div>
-                  <div className="text-sm font-extrabold text-slate-800">Fully Stocked Trucks</div>
-                </div>
-              </div>
-            </section>
-
-            {/* SERVICES PREVIEW GRID CARD SECTION */}
-            <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 bg-slate-50">
-              {renderSectionHeader(
-                "Home Service Classifications",
-                "Professional Garage Door Services in Florida",
-                "Your garage door is the heaviest moving system in your home. We facilitate connection with expert local crews equipped to resolve mechanical or structural track failures instantly."
-              )}
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {servicesData.map(service => (
-                  <div 
-                    key={service.id}
-                    className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all group"
-                  >
-                    <div className="h-48 overflow-hidden relative">
-                      <img 
-                        src={service.mainImage} 
-                        alt={service.title} 
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute top-3 left-3 bg-slate-900 border border-slate-700 text-white text-[10px] uppercase font-bold py-1 px-2.5 rounded-full shadow-sm">
-                        Floridian Standard
-                      </div>
-                    </div>
-                    <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
-                      <div className="space-y-2">
-                        <h3 className="text-lg font-bold text-slate-900 group-hover:text-brand-blue transition-colors leading-snug">
-                          {service.title}
-                        </h3>
-                        <p className="text-xs text-slate-500 leading-relaxed line-clamp-3">
-                          {service.shortDescription}
-                        </p>
-                      </div>
-                      <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-                        <button 
-                          onClick={() => handleNavigate(service.id)}
-                          className="font-bold text-brand-blue hover:text-brand-blue-hover text-left flex items-center gap-1 cursor-pointer"
-                        >
-                          Learn Service & Symptoms &rarr;
-                        </button>
-                        <span className="text-[10px] text-emerald-600 bg-emerald-50 border border-emerald-100 py-0.5 px-2 rounded-full font-bold">
-                          Same-day
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* INTERACTIVE Florida DISPATCH route MAP */}
-            <section className="py-16 sm:py-20 bg-slate-100 border-y border-slate-200">
+            {/* INTERACTIVE Florida ACTIVE ROUTING MAP */}
+            <section className="py-16 sm:py-20 bg-slate-100 border-b border-slate-200">
               <div className="max-w-7xl mx-auto px-4">
                 <div className="max-w-3xl mx-auto text-center mb-10">
-                  <span className="text-xs font-bold text-brand-blue uppercase tracking-wider bg-white py-1 px-3 rounded-full border border-slate-200 shadow-xs">
-                    Local Service Area Map
+                  <span className="text-xs font-bold text-blue-700 uppercase tracking-wider bg-white py-1.5 px-4 rounded-full border border-slate-200 shadow-xs">
+                    Local Route Service Area Map
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Active Broward & Palm Beach Counties Route</h3>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Active Broward & Palm Beach Counties</h3>
                 </div>
                 <MapSection onNavigateToArea={handleNavigate} />
               </div>
             </section>
 
-            {/* DYNAMIC FLORIDA ACCREDITATIONS & REVIEWS */}
-            <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4">
-              {renderSectionHeader(
-                "Verified Customer Experiences",
-                "Honest Local Testimonials",
-                "Home owners across Florida depend on our matched garage partners. Read real-world stories of quality service and clear billing below:"
-              )}
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                {areasData.map(area => (
-                  <div key={area.id} className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 space-y-5 shadow-xs">
-                    <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-                      <div>
-                        <h4 className="font-extrabold text-slate-900 text-lg leading-tight">{area.county} Feedback</h4>
-                        <p className="text-xs text-slate-500">Service Coverage Areas: {area.cities.slice(0, 4).join(', ')}</p>
-                      </div>
-                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-slate-100 py-1 px-2 rounded">
-                        Latest Logs
-                      </span>
-                    </div>
-
-                    <div className="space-y-4">
-                      {area.reviews.map(rev => (
-                        <div key={rev.id} className="bg-slate-50 p-4 rounded-lg border border-slate-100 space-y-2">
-                          <div className="flex justify-between items-center text-xs">
-                            <span className="font-bold text-slate-800">{rev.name}</span>
-                            <span className="font-mono text-slate-400">{rev.date}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-3.5 h-3.5 fill-amber-400 stroke-amber-400" />
-                            ))}
-                            <span className="text-[10px] bg-emerald-100 text-emerald-800 py-0.5 px-1.5 font-bold rounded-full ml-1">
-                              Verified Order
-                            </span>
-                          </div>
-                          <p className="text-xs text-slate-600 italic leading-relaxed">
-                            "{rev.text}"
-                          </p>
-                          <span className="text-[10px] text-slate-400 block font-semibold">&bull; Serving route: {rev.location}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* FAQ HELPDESK SECTION */}
-            <section className="bg-slate-950 text-white py-16 sm:py-24 border-t border-slate-900">
-              <div className="max-w-4xl mx-auto px-4">
-                <div className="text-center mb-12 sm:mb-16">
-                  <span className="text-xs text-brand-accent font-bold uppercase tracking-widest bg-slate-900/80 py-1.5 px-3 rounded-full border border-slate-800">
-                    Florida FAQ Help Desk
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-bold font-heading text-white mt-3">Common Garage Door Questions</h3>
-                </div>
-
-                <div className="space-y-6 text-sm">
-                  {[
-                    {
-                      q: 'Why should I look for emergency garage door repair florida rather than try a DIY fix?',
-                      a: 'A heavy garage door contains high-tension springs operating with hundreds of foot-pounds of torque force. Attempting to balance issues, repair cables, or adjust torsion shafts without specialised tools, wind bars, and certified training can result in immediate physical harm, limb fractures, or property damage.'
-                    },
-                    {
-                      q: 'Do local Florida coastal conditions affect high-tension springs?',
-                      a: 'Yes. South Florida humidity combined with high salt-air concentration accelerates iron oxidation (rust) on exposed garage door spring coils. Rust increases friction and creates structural fatigue micro-fractures, which are the main cause of springs snapping. Regularly spraying with clean silicone-based lubricant extends operational cycles.'
-                    },
-                    {
-                      q: 'How can I ensure my garage door service complies with transparent standards?',
-                      a: 'Under LeadSmart LLC standards, you should receive a clear written estimate covering individual part variables and precise labor values before work begins. We represent local partner networks that perform honest diagnostics, never force fake urgency sales, and maintain standard business license validations.'
-                    }
-                  ].map((faq, idx) => (
-                    <div key={idx} className="bg-slate-900 p-5 rounded-lg border border-slate-850 space-y-2">
-                      <h4 className="font-bold text-white text-base leading-snug flex items-start gap-2">
-                        <HelpCircle className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
-                        {faq.q}
-                      </h4>
-                      <p className="text-xs text-slate-400 pl-7 leading-relaxed font-light">
-                        {faq.a}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
+            {/* VERIFIED TESTIMONIALS & TRUST STATS */}
+            <GetTestimonialsSection />
+            
+            {/* ABOUT OUR REFERRAL COMPLIANCE & SAFETY */}
+            <AboutSection onNavigate={handleNavigate} />
+            
+            {/* ACTIVE AREAS WE SERVE COUNTIES & SUB-CITIES INDEX */}
+            <AreasWeServeSection onNavigate={handleNavigate} />
+            
+            {/* COMPOSITE MULTI-ACCORDION FAQS */}
+            <FAQSection onNavigate={handleNavigate} />
+            
+            {/* SECONDARY GET IN TOUCH DIAGNOSTIC FORM */}
+            <GetInTouchForm onNavigate={handleNavigate} />
           </div>
         )}
 
