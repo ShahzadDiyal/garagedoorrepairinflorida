@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f172a; /* slate-900 */
+  --color-brand-blue: #1d4ed8; /* blue-700 - professional service blue */
+  --color-brand-blue-hover: #1e40af; /* blue-800 */
+  --color-brand-accent: #ea580c; /* orange-600 - notice/calls/safety accent */
+  --color-brand-accent-hover: #c2410c; /* orange-700 */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Outfit", sans-serif;
+  --font-mono: "Fira Code", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight font-semibold text-slate-900;
+  }
+}
+
+/* Draggable button custom touch behavior to prevent screen bouncing during drag */
+.draggable-touch-none {
+  touch-action: none;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Florida Garage Door Repair",
+  "description": "Professional, trustworthy, and same-day garage door repair, spring replacement, and opener repair services across Broward and Palm Beach counties, Florida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
